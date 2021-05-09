@@ -1,6 +1,8 @@
 function signContract() external onlySpouse {
-  require(isSameString(writtenContractIpfsHash, ""), "Written contract ipfs hash has been proposed yet!");
-  require(hasSigned[msg.sender] == false, "Spouse has already signed the contract!");
+  require(isSameString(writtenContractIpfsHash, ""), 
+          "Written contract ipfs hash has been proposed yet!");
+  require(hasSigned[msg.sender] == false, 
+          "Spouse has already signed the contract!");
   
   // Sender signed
   hasSigned[msg.sender] = true;
